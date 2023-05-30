@@ -20,7 +20,7 @@ int main() {
 		catch (int fError) {
 			printf("%d\n", fError);
 		}
-		catch (char* pszError) {
+		catch (const char* pszError) {
 			printf("%s\n", pszError);
 		};
 	};
