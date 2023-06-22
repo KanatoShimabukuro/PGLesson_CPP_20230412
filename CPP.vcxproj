@@ -18,18 +18,6 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="SourceFiles\PG2\0523\SceneManager\AbstractScene.h" />
-    <ClInclude Include="SourceFiles\PG2\0523\SceneManager\GameMainScene.h" />
-    <ClInclude Include="SourceFiles\PG2\0523\SceneManager\SceneManager.h" />
-    <ClInclude Include="SourceFiles\PG2\0523\SceneManager\TitleScene.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="SourceFiles\PG2\0523\SceneManager\GameMainScene.cpp" />
-    <ClCompile Include="SourceFiles\PG2\0523\SceneManager\main.cpp" />
-    <ClCompile Include="SourceFiles\PG2\0523\SceneManager\SceneManager.cpp" />
-    <ClCompile Include="SourceFiles\PG2\0523\SceneManager\TitleScene.cpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
