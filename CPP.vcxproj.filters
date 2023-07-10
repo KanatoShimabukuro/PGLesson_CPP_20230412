@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SourceFiles\GameMath\0705\main.cpp">
+    <ClCompile Include="SourceFiles\Original\CountdownWord\main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
