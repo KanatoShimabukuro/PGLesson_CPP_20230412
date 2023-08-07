@@ -2,7 +2,7 @@
 #include <math.h>
 
 // FPS
-#define FPS 30
+#define FPS 60
 
 // sec
 #define SECOND(_sec) ((_sec)*FPS)
