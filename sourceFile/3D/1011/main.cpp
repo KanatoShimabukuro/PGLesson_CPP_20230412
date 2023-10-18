@@ -1,7 +1,7 @@
 ﻿#include "main.h"
 
 int main(int argc, char* argv[]) {
-    SetConsoleOutputCP(65001); // 日本語を使用可能にする
+    SetConsoleOutputCP(CP_UTF8); // 日本語を使用可能にする
 
     // 引数にファイルパスが渡されなかった
     if(argc != 2) {
