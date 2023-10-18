@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="SourceFiles\3D\1011\main.cpp" />
+    <ClCompile Include="sourceFiles\Original\FileReader\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="SourceFiles\3D\1011\main.h" />
+    <ClInclude Include="sourceFiles\Original\FileReader\main.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

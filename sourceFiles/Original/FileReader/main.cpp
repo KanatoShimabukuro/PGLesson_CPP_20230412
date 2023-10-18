@@ -1,6 +1,45 @@
 ﻿#include "main.h"
 
+std::vector<std::wstring> ListFilesAndFolders(const std::wstring& folderPath);
+
 int main(int argc, char* argv[]) {
+    if (argc != 2) {
+        std::cout << "使用法: " << argv[0] << " <フォルダパス>" << std::endl;
+        return 1;
+    }
+
+    std::wstring folderPath = std::wstring(argv[1], argv[1] + strlen(argv[1])); // char* を wchar_t* に変換
+
+    std::vector<std::wstring> entries = ListFilesAndFolders(folderPath);
+
+    for (const auto& entry : entries) {
+        std::wcout << entry << std::endl;
+    }
+
+    return 0;
+}
+
+std::vector<std::wstring> ListFilesAndFolders(const std::wstring& folderPath) {
+    std::vector<std::wstring> result;
+
+    if (std::filesystem::exists(folderPath) && std::filesystem::is_directory(folderPath)) {
+        for (const auto& entry : std::filesystem::directory_iterator(folderPath)) {
+            if (entry.is_directory()) {
+                result.push_back(L"フォルダ: " + entry.path().filename().wstring());
+            }
+            else {
+                result.push_back(L"ファイル: " + entry.path().filename().wstring());
+            }
+        }
+    }
+    else {
+        result.push_back(L"指定したフォルダが存在しないか、フォルダではありません。");
+    }
+
+    return result;
+}
+
+/* int main(int argc, char* argv[]) {
     SetConsoleOutputCP(CP_UTF8); // 日本語を使用可能にする
 
     // 引数にファイルパスが渡されなかった
@@ -52,7 +91,7 @@ int main(int argc, char* argv[]) {
     };
 
     return 0;
-};
+}; */
 
 /*int main() {
     SetConsoleOutputCP(65001);
