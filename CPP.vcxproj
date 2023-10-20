@@ -19,10 +19,12 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sourceFiles\Original\FileReader\main.cpp" />
+    <ClCompile Include="sourceFiles\3D\1011\calc.cpp" />
+    <ClCompile Include="sourceFiles\3D\1011\main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sourceFiles\Original\FileReader\main.h" />
+    <ClInclude Include="sourceFiles\3D\1011\calc.h" />
+    <ClInclude Include="sourceFiles\3D\1011\main.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
