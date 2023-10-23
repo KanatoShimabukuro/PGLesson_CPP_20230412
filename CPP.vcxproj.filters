@@ -15,18 +15,12 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sourceFiles\3D\1011\calc.cpp">
-      <Filter>ソース ファイル</Filter>
-    </ClCompile>
-    <ClCompile Include="sourceFiles\3D\1011\main.cpp">
+    <ClCompile Include="sourceFiles\3D\1023 3D_Model_Lib\main.cpp">
       <Filter>ソース ファイル</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sourceFiles\3D\1011\calc.h">
-      <Filter>ソース ファイル</Filter>
-    </ClInclude>
-    <ClInclude Include="sourceFiles\3D\1011\main.h">
+    <ClInclude Include="sourceFiles\3D\1023 3D_Model_Lib\main.h">
       <Filter>ソース ファイル</Filter>
     </ClInclude>
   </ItemGroup>
