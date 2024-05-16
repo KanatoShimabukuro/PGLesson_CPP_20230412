@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sourceFiles\3D\1023 3D_Model_Lib\main.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="sourceFiles\3D\1023 3D_Model_Lib\main.h" />
+    <ClCompile Include="sourceFiles\GameMath\0529\main.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

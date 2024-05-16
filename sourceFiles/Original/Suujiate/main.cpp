@@ -1,43 +1,47 @@
-#include <iostream>
+ï»¿#include <iostream>
 #include <cstdlib>
 #include <ctime>
 
+#include "windows.h"
+
 bool playAgain() {
     char choice;
-    std::cout << "‚à‚¤ˆê“xƒvƒŒƒC‚µ‚Ü‚·‚©H (y/n) : ";
+    std::cout << "ã‚‚ã†ä¸€åº¦ãƒ—ãƒ¬ã‚¤ã—ã¾ã™ã‹ï¼Ÿ (y/n) : ";
     std::cin >> choice;
     return (choice == 'y' || choice == 'Y');
 };
 
 void main() {
-    // —”‚Ìí‚ğİ’è
+    SetConsoleOutputCP(CP_UTF8); // æ—¥æœ¬èªã‚’ä½¿ç”¨å¯èƒ½ã«ã™ã‚‹
+
+    // ä¹±æ•°ã®ç¨®ã‚’è¨­å®š
     std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
     bool continuePlaying = true;
 
     while (continuePlaying) {
-        // 1‚©‚ç100‚Ü‚Å‚Ìƒ‰ƒ“ƒ_ƒ€‚È®”‚ğ¶¬
-        int targetNumber = std::rand() % 100 + 1;
+        // 1ã‹ã‚‰999ã¾ã§ã®ãƒ©ãƒ³ãƒ€ãƒ ãªæ•´æ•°ã‚’ç”Ÿæˆ
+        int targetNumber = std::rand() % 999 + 1;
 
         int guess;
         int attempts = 0;
 
-        std::cout << "”š“–‚ÄƒQ[ƒ€  |  1‚©‚ç100‚Ü‚Å‚Ì’†‚Ì”š‚ğ“–‚Ä‚Ä‚Ë  |  Created by kanato224.\n" << std::endl;
+        std::cout << "æ•°å­—å½“ã¦ã‚²ãƒ¼ãƒ  (æ•°å­—ã‚’å½“ã¦ã¦ã­)  |  Programmed by kanaaa224.\n" << std::endl;
 
         while (true) {
-            std::cout << "—\‘z‚µ‚½”š‚ğ“ü—Í‚µ‚Ä‚­‚¾‚³‚¢F";
+            std::cout << "äºˆæƒ³ã—ãŸæ•°å­—ã‚’å…¥åŠ›ã—ã¦ãã ã•ã„ï¼š";
             std::cin >> guess;
 
             attempts++;
 
             if (guess < targetNumber) {
-                std::cout << "‚à‚Á‚Æ‘å‚«‚È”‚Å‚·B\n" << std::endl;
+                std::cout << "ã‚‚ã£ã¨å¤§ããªæ•°ã§ã™ã€‚\n" << std::endl;
             }
             else if (guess > targetNumber) {
-                std::cout << "‚à‚Á‚Æ¬‚³‚È”‚Å‚·B\n" << std::endl;
+                std::cout << "ã‚‚ã£ã¨å°ã•ãªæ•°ã§ã™ã€‚\n" << std::endl;
             }
             else {
-                std::cout << "³‰ğ‚Å‚·Ii³‰ğ‚Ü‚Å‚Ìs‰ñ”F" << attempts << "j\n" << std::endl;
+                std::cout << "æ­£è§£ã§ã™ï¼ï¼ˆæ­£è§£ã¾ã§ã®è©¦è¡Œå›æ•°ï¼š" << attempts << "ï¼‰\n" << std::endl;
                 break;
             };
         };
@@ -46,5 +50,5 @@ void main() {
         std::cout << std::endl;
     };
 
-    std::cout << "ƒQ[ƒ€‚ğI—¹‚µ‚Ü‚·B‚¨”æ‚ê—l‚Å‚µ‚½I" << std::endl;
+    std::cout << "ã‚²ãƒ¼ãƒ ã‚’çµ‚äº†ã—ã¾ã™ã€‚ãŠç–²ã‚Œæ§˜ã§ã—ãŸï¼" << std::endl;
 };
