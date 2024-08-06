@@ -19,7 +19,16 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="sourceFiles\GameMath\0529\main.cpp" />
+    <ClCompile Include="source\programming3\furikaeri\Enemy.cpp" />
+    <ClCompile Include="source\programming3\furikaeri\GameObject.cpp" />
+    <ClCompile Include="source\programming3\furikaeri\main.cpp" />
+    <ClCompile Include="source\programming3\furikaeri\Player.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="source\programming3\furikaeri\Enemy.h" />
+    <ClInclude Include="source\programming3\furikaeri\GameObject.h" />
+    <ClInclude Include="source\programming3\furikaeri\Player.h" />
+    <ClInclude Include="source\programming3\furikaeri\Vector2D.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
