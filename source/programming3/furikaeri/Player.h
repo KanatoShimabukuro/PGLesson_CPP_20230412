@@ -4,9 +4,9 @@
 
 class Player : public GameObject {
 private:
-	int animation_image_handle; // アニメーションの画像データ
-	int animation_time;         // アニメーションの時間
-	int animation_index;        // アニメーションの添え字
+	int   animation_image_handles[10]; // アニメーションの画像データ
+	int   animation_index;             // アニメーションの添え字
+	float animation_time;              // アニメーションの時間
 
 public:
 	Player();

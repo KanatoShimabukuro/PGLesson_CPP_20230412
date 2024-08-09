@@ -4,7 +4,7 @@
 
 class Enemy : public GameObject {
 private:
-	int animation_image_handle; // アニメーションの画像データ
+	int animation_image_handles[10]; // アニメーションの画像データ
 
 public:
 	Enemy();

@@ -1,5 +1,7 @@
 #pragma once
 
+#include <cmath>
+
 class Vector2D {
 public:
 	float x;
@@ -66,15 +68,15 @@ public:
 
 	// "/"演算子オーバーロード
 	const Vector2D operator / (const Vector2D& vec) {
-		if (vec.x < 1e-6f) return Vector2D(0.0f);
-		if (vec.y < 1e-6f) return Vector2D(0.0f);
+		if (abs(vec.x) < 1e-6f) return Vector2D(0.0f);
+		if (abs(vec.y) < 1e-6f) return Vector2D(0.0f);
 
 		return Vector2D(this->x / vec.x, this->y / vec.y);
 	}
 
 	// "/"演算子オーバーロード（割った値が単一）
 	const Vector2D operator / (const float& scalar) {
-		if (scalar < 1e-6f) return Vector2D(0.0f);
+		if (abs(scalar) < 1e-6f) return Vector2D(0.0f);
 
 		return Vector2D(this->x / scalar, this->y / scalar);
 	}
@@ -113,11 +115,11 @@ public:
 
 	// "/="演算子オーバーロード
 	Vector2D& operator /= (const Vector2D& vec) {
-		if (vec.x < 1e-6f) {
+		if (abs(vec.x) < 1e-6f) {
 			this->x = 0.0f;
 			this->y = 0.0f;
 		}
-		else if (vec.y < 1e-6f) {
+		else if (abs(vec.y) < 1e-6f) {
 			this->x = 0.0f;
 			this->y = 0.0f;
 		}
@@ -131,7 +133,7 @@ public:
 
 	// "/="演算子オーバーロード（割った値が単一）
 	Vector2D& operator /= (const float& scalar) {
-		if (scalar < 1e-6f) {
+		if (abs(scalar) < 1e-6f) {
 			this->x = 0.0f;
 			this->y = 0.0f;
 		}

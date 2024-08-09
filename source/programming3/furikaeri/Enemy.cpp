@@ -1,6 +1,10 @@
 #include "Enemy.h"
 
-Enemy::Enemy() : animation_image_handle(0) {}
+Enemy::Enemy() {
+	for (int i = 0; i < 10; i++) {
+		animation_image_handles[i] = 0;
+	}
+}
 
 Enemy::~Enemy() {}
 
