@@ -1,8 +1,5 @@
-#include <stdio.h>
+#include <iostream>
 
-int main() {
-
-	printf("HELLO");
-
-	return 0;
-};
+void main() {
+	std::cout << "あ" << std::endl;
+}
